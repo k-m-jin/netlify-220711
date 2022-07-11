@@ -142,15 +142,16 @@ interface RequestOptions {
   }
 }
 async function request(options: RequestOptions) {
+  //도메인/.netlify/functions/test
   const { id = '', method, body } = options
-  const res = await fetch(`https://asia-northeast3-heropy-api.cloudfunctions.net/api/notion/workspaces/${id}`, {
-    method,
-    headers: {
-      'content-type': 'application/json',
-      'apikey': 'FcKdtJs202204',
-      'username': 'ParkYoungWoong'
-    },
-    body: JSON.stringify(body)
+  const res = await fetch( '/.netlify/functions/workspace', {
+    //서버로 전송할 테이터는 post 
+    method:'POST',
+    body: JSON.stringify({
+      id,
+      method,
+      data: body,
+    })
   })
   return res.json()
 }
