@@ -8,10 +8,10 @@
 #    status = 200
 
 [[edge_functions]]
-  path = '/workspces/*'
-  function = 'workspaces'
+  path = "/workspaces/*"
+  function = "workspaces"
 
 [[redirects]]
-   from = '/*'
-   to = '/index.html'
-   status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
