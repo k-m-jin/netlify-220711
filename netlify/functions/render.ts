@@ -75,10 +75,8 @@ const handler: Handler = async event => {
     <div id="app">
       <!-- <App /> -->
     </div>
-    
   </body>
 </html>
-
     `
   }
 }
